@@ -9,3 +9,13 @@ target_link_libraries(OpenVideoDiary
 	Qt5::MultimediaWidgets
 	Qt5::Sql
 	)
+install(TARGETS OpenVideoDiary
+	RUNTIME
+	DESTINATION .
+	COMPONENT applications)
+
+include(WinDeployQt)
+WinDeployQt(TARGET OpenVideoDiary COMPILER_RUNTIME INCLUDE_MODULES ${QTLIBS} EXCLUDE_MODULES webkit webkit2)
+install(DIRECTORY ${PROJECT_BINARY_DIR}/windeployqt/
+	DESTINATION .)
+
