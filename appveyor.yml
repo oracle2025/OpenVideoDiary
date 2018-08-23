@@ -6,7 +6,7 @@ environment:
        CONFIG: Release
 
 install:
-  - set QTDIR=C:\Qt\5.7\msvc2015_64
+  - set QTDIR=C:\Qt\5.11.1\msvc2015_64
   - set PATH=%PATH%;%QTDIR%\bin
 
 build_script:
