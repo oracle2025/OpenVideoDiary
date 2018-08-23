@@ -9,7 +9,7 @@ print "hello from appveyor.helper.py"
 config = os.environ['CONFIG']
 path = os.environ['PATH']
 generator = os.environ['GENERATOR']
-cmake_command = ['cmake', '-G', generator, '-DFMT_PEDANTIC=ON', '-DCMAKE_BUILD_TYPE=' + config]
+cmake_command = ['cmake', '-G', generator, '-DCMAKE_BUILD_TYPE=' + config]
 
 os.environ['PATH'] = r'C:\Program Files (x86)\MSBuild\14.0\Bin;' + path
 build_command = ['msbuild', '/m:4', '/p:Config=' + config, 'OpenVideoDiary.sln']
