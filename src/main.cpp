@@ -94,6 +94,8 @@ QSqlError initDb()
 	if (!q.prepare(QLatin1String("insert into entries(title, filename, created_on) values(?, ?, ?)")))
 		return q.lastError();
 
+	return QSqlError("", "", QSqlError::NoError, "");
+
 }
 
 QSqlRelationalTableModel *create_model(QObject *parent)
