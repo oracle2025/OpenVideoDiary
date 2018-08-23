@@ -12,7 +12,7 @@ generator = os.environ['GENERATOR']
 cmake_command = ['cmake', '-G', generator, '-DCMAKE_BUILD_TYPE=' + config]
 
 os.environ['PATH'] = r'C:\Program Files (x86)\MSBuild\14.0\Bin;' + path
-build_command = ['msbuild', '/m:4', '/p:Configuration=' + config + '|x64', 'OpenVideoDiary.sln']
+build_command = ['msbuild', '/m:4', '/p:Configuration=' + config, 'OpenVideoDiary.sln']
 #test_command = ['msbuild', 'RUN_TESTS.vcxproj']
 
 pack_command = ['cpack', '-C', config]
