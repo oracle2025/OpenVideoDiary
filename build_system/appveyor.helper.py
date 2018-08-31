@@ -9,8 +9,9 @@ print "hello from appveyor.helper.py"
 config = os.environ['CONFIG']
 path = os.environ['PATH']
 generator = os.environ['GENERATOR']
-tag = os.environ['APPVEYOR_REPO_TAG_NAME']
-if len(tag) == 0:
+if os.environ['APPVEYOR_REPO_TAG'] == 'true':
+  tag = os.environ['APPVEYOR_REPO_TAG_NAME']
+else:
   tag = 'v' + os.environ['appveyor_build_version']
 cmake_command = ['cmake', '-G', generator, '-DCMAKE_BUILD_TYPE=' + config, '-DTAG='+tag]
 
