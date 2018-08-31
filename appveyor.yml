@@ -16,7 +16,7 @@ artifacts:
   - name: Installer
     path: 'OpenVideoDiary-*.exe'
   - name: Binary
-    path: 'OpenVideoDiary.exe'
+    path: 'src/Debug/OpenVideoDiary.exe'
 
 matrix:
   fast_finish: true
